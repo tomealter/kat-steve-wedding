@@ -7,33 +7,32 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
+
+		{# HEADER #}
 		<header class="header" >
 			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
+				<div class="l-constrain">
+					<nav class="nav nav--main" role="navigation">
+						<ul class="nav__list">
+							<li class="nav__item"><a href="#" class="nav__link">STORY</a></li>
+							<li class="nav__item"><a href="#" class="nav__link">TRAVEL</a></li>
+							<li class="nav__item"><a href="#" class="nav__link">EVENTS</a></li>
+							<li class="nav__item"><a href="#" class="nav__link">RSVP</a></li>
+							<li class="nav__item"><a href="#" class="nav__link">CONTACT</a></li>
+						</ul>
 					</nav><!-- #nav -->
 				</div>
 			{% endblock %}
 		</header>
 
+		{# MAIN CONTENT HERE #}
 		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
+			{% block content %}
+				Sorry, no content
+			{% endblock %}
 		</section>
 
+		{# FOOTER #}
 		{% block footer %}
 			<footer id="footer">
 				{% include 'footer.twig' %}

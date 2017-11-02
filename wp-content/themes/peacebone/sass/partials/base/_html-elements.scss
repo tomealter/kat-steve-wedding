@@ -1,13 +1,14 @@
 html {
   font-family: $base-font;
+  font-size: $base-font-size;
 }
 
 body {
-
+  margin: 0;
 }
 
 a {
-
+  text-decoration: none;
 }
 
 p {
@@ -16,7 +17,8 @@ p {
 
 // HEADINGS
 h1 {
-
+  font-family: $header-font;
+  font-size: em(72px);
 }
 
 h2 {

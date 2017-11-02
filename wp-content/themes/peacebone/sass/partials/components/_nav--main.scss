@@ -1,0 +1,23 @@
+.nav--main {
+  width: 100%;
+  display: block;
+  padding: 1em 0;
+
+  .nav__list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav__item {
+    margin-left: 1.5em;
+    list-style: none;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    
+  }
+}
+ 
+
+
