@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}

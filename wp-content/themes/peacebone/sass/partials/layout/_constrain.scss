@@ -1,7 +1,8 @@
 .l-constrain {
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 0 1em;
+  width: 100%;
 
   &.l-constrain--narrow {
     max-width: 900px; 
