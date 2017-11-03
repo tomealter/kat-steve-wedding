@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: $base-font;
   font-size: $base-font-size;
+  font-weight: 300;
 }
 
 body {
@@ -18,15 +23,23 @@ p {
 // HEADINGS
 h1 {
   font-family: $header-font;
-  font-size: em(72px);
+  font-size: em(90px);
+  font-weight: 700;
+  margin: 0 0 1em 0;
 }
 
 h2 {
-
+  font-family: $base-font;
+  font-size: em(72px);
+  font-weight: 300;
+  margin: 0 0 1em 0;
 }
 
 h3 {
-
+  font-family: $base-font;
+  font-size: em(48px);
+  font-weight: 700;
+  margin: 0 0 1em 0;
 }
 
 h4 {
@@ -37,4 +50,7 @@ h5 {
 
 }
 
+.main {
+  //transform: translateY(-80px);
+}
 

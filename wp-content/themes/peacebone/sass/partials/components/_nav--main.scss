@@ -1,7 +1,6 @@
 .nav--main {
-  width: 100%;
   display: block;
-  padding: 1em 0;
+  width: 100%;
 
   .nav__list {
     display: flex;
@@ -9,13 +8,13 @@
   }
 
   .nav__item {
-    margin-left: 1.5em;
     list-style: none;
+    margin-left: 1.5em;
   }
 
   .nav__link {
+    color: #fff;
     text-decoration: none;
-    
   }
 }
  

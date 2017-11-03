@@ -7,7 +7,6 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-
 		{# HEADER #}
 		<header class="header" >
 			{% block header %}
@@ -26,7 +25,7 @@
 		</header>
 
 		{# MAIN CONTENT HERE #}
-		<section id="content" role="main" class="content-wrapper">
+		<section id="content" role="main" class="main">
 			{% block content %}
 				Sorry, no content
 			{% endblock %}
@@ -39,5 +38,6 @@
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
+
 	</body>
 </html>
