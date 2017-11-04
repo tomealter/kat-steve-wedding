@@ -3,14 +3,26 @@
 {% block content %}
 
   {# BG IMAGE FIXED BLOCK #}
-  <div class="bg-image image-1"></div>
+  <div class="bg-image image-1" style="background-image: url(http://picsum.photos/1600/1000)"></div>
+  <div class="bg-image image-2" style="background-image: url(http://picsum.photos/1600/1001)"></div>
+  <div class="bg-image image-3" style="background-image: url(http://picsum.photos/1600/1002)"></div>
 
   {# LANDING SECTION #}
 	<div class="section section--gradient section--landing">
     <div class="section__content">
-      <div class="l-constrain">
-        <h1 class="section__title">Kat & Steve's</h1>
-      </div>
+      {% if post.landing_title %}
+        <h1 class="section__title">{{ post.landing_title }}</h1>
+      {% endif %}
+
+      {% if post.landing_subtitle %}
+        <h2 class="section__subtitle">{{ post.landing_subtitle }}</h2>
+      {% endif %}
+
+      {% if post.landing_date %}
+        <h4 class="section__date">{{ post.landing_date }}</h4>
+      {% endif %}
+    
+      <a href="#" class="button section__button">RSVP</a>
     </div>
   </div>
 

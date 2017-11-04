@@ -15,6 +15,22 @@
   .nav__link {
     color: #fff;
     text-decoration: none;
+    position: relative;
+
+    @include pseudoblock(after, block) {
+      width: 0;
+      position: absolute;
+      height: 2px;
+      background-color: #fff;
+      transition: all 200ms ease-in;
+      top: -5px;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
   }
 }
  

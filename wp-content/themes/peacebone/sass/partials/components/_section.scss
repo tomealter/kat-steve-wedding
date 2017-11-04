@@ -2,7 +2,6 @@
   min-height: 100vh;
   width: 100%;
   position: relative;
-  z-index: -1;
 
   &.section--gradient {
     color: #ffffff;
@@ -25,6 +24,17 @@
   text-align: center;
 }
 
+.section__subtitle {
+  text-align: center;
+}
+
+.section__date {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+
+
 
 //LANDING
 .section--landing {
@@ -34,16 +44,48 @@
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+    z-index: 1;
+    padding: 0 1em;
   }
 
   .section__title {
+    margin-bottom: .5em;
+    font-size: 100px;
+
     @include pseudoblock(after, block) {
-      width: 250px;
+      width: 350px;
       height: 2px;
       background-color: #fff;
       position: relative;
-      left: 50%;
-      transform: translateX(-50%);
+      margin: 0 auto;
+      top: 20px;
     }
+  }
+
+  .section__subtitle {
+    margin-bottom: 0;
+  }
+
+  .section__button {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  @include pseudoblock(before, block) {
+    @include svg-background(arrows-down);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 30px;
+    height: 23px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 29px;
   }
 }
