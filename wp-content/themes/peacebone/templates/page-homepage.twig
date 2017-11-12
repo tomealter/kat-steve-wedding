@@ -26,4 +26,83 @@
     </div>
   </div>
 
+  {# STORY SECTION #}
+	<div class="section section--white section--story">
+    <div class="l-constrain">
+      {% if post.story_title %}
+        <h1 class="section__title">{{ post.story_title }}</h1>
+      {% endif %}
+
+      <div class="section__row">
+        <div class="flex-column">
+          <div class="image-grid">
+            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_1).src }})"></div>
+            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_2).src }})"></div>
+            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_3).src }})"></div>
+            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_4).src }})"></div>
+            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_5).src }})"></div>
+          </div>
+        </div>
+        <div class="flex-column">
+          <div class="section__content">
+            {% if post.story_content %}
+              {{ post.story_content }}
+            {% endif %}
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  {# EVENTS SECTION #}
+
+  <div class="section section--gradient section--events">
+    <div class="l-constrain">
+
+      {% if post.events_title %}
+        <h1 class="section__title">{{ post.events_title }}</h1>
+      {% endif %}
+
+
+      <div class="events">
+        <div class="events__row"> 
+          <div class="events__date-list">
+            <div id="date-06" class="events__date is-active">06</div>
+            <div id="date-07" class="events__date">07</div>
+            <div id="date-08" class="events__date">08</div>
+            <div id="date-09" class="events__date">09</div>
+            <div id="date-10" class="events__date">10</div>
+            <div id="date-11" class="events__date">11</div>
+          </div>
+          <div class="events__list">
+            <div id="date-06" class="events__item is-active">
+              <h3 class="events__title">Repudiandae</h3>
+              <p class="events__summary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae est modi ad temporibus dolorem quaerat, fuga, at ipsa officia nemo nostrum vel labore aperiam laboriosam, alias nesciunt inventore aliquid necessitatibus.</p>
+            </div>
+            <div id="date-07" class="events__item">
+              <h3 class="events__title">Adipisci ab odit</h3>
+              <p class="events__summary">Adipisci ab odit reiciendis voluptatum maiores non sint architecto quaerat modi blanditiis omnis doloribus corrupti qui eveniet deleniti earum perspiciatis iure beatae labore explicabo, possimus provident. Harum nesciunt nostrum ullam.</p>
+            </div>
+            <div id="date-08" class="events__item">
+              <h3 class="events__title">Sequi quaerat</h3>
+              <p class="events__summary">Sequi quaerat cupiditate eius nobis veniam incidunt voluptates fuga, eaque saepe maiores quis, pariatur unde atque enim est aut architecto asperiores laborum voluptatibus dolorum voluptate, beatae iusto dolore. Odit, illo.</p>
+            </div>
+            <div id="date-09" class="events__item">
+              <h3 class="events__title">Blanditiis at dicta</h3>
+              <p class="events__summary">Blanditiis at dicta quia vero consequatur, cumque culpa ipsa, explicabo aspernatur nam id voluptate tempore repudiandae doloremque beatae, mollitia atque! Hic neque assumenda ut natus velit. Ab quaerat nostrum labore.</p>
+            </div>
+            <div id="date-10" class="events__item">
+              <h3 class="events__title">Eos explicabo</h3>
+              <p class="events__summary">Eos explicabo dolorem consequatur facere vel autem? Odit quis minima ratione dolore, accusantium dicta rerum, exercitationem architecto optio, non error cumque in. Temporibus quidem beatae consequatur non ab nemo esse!</p>
+            </div>
+            <div id="date-11" class="events__item">
+              <h3 class="events__title">Quidem quod</h3>
+              <p class="events__summary">Quidem quod recusandae amet consequatur enim repudiandae ipsa suscipit nemo, pariatur, quas at, temporibus animi fugiat ipsam impedit eaque sed optio facere expedita vel deleniti et quis delectus! Eius, asperiores?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

@@ -1,0 +1,67 @@
+.events {
+  padding: 1em;
+  display: block;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.events__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.events__date-list {
+  flex-basis: 100px;
+  border-right: solid 1px #ddd;
+  padding-top: 0.5em;
+}
+
+.events__date {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  text-align: right;
+  padding-right: 1em;
+  position: relative;
+  font-weight: 700;
+  
+  &.is-active {
+    &:after {
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 4px;
+      background-color: #000;
+      content: '';
+      right: 0;
+      top: 0;
+    }
+    &:before {
+      content: 'JULY';
+      font-weight: 300;
+      position: relative;
+      left: -10px;
+    }
+  }
+}
+
+.events__list {
+  flex-basis: calc(100% - 100px);
+  box-sizing: border-box;
+  padding-left: 1.5em;
+}
+
+.events__item {
+  position: absolute;
+  //display: none;
+  opacity: 0;
+  transition: all .3s ease-in;
+  
+  &.is-active {
+    //display: block;
+    opacity: 1;
+  }
+}

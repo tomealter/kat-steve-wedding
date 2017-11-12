@@ -1,0 +1,67 @@
+//LANDING
+.section.section--landing {
+  
+  .section__content {
+    padding: 3em 1em;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    @include breakpoint(700px) {
+      padding: 0 1em;  
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .section__title {
+    margin-bottom: .5em;
+
+    @include pseudoblock(after, block) {
+      background-color: #fff;
+      height: 2px;
+      margin: 0 auto;
+      position: relative;
+      top: 10px;
+      width: 250px;
+      max-width: 90%;
+    }
+
+    @include breakpoint(800px) {
+      font-size: 90px;
+
+      &:after {
+        top: 20px;
+        width: 350px;
+      }
+    }
+  }
+
+  .section__subtitle {
+    margin-bottom: 0;
+  }
+
+  .section__button {
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  @include pseudoblock(before, block) {
+    @include svg-background(arrows-down);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 30px;
+    height: 23px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 29px;
+  }
+}

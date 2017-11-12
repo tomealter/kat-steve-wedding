@@ -42,8 +42,10 @@ class StarterSite extends TimberSite {
 		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
+		$context['events'] = Timber::get_posts('post_type=events');
 		return $context;
 	}
+
 
 	function myfoo( $text ) {
 		$text .= ' bar!';
@@ -62,7 +64,8 @@ class StarterSite extends TimberSite {
 function add_theme_scripts() {
 	
 	 wp_enqueue_style( 'styles', get_template_directory_uri() . '/css/styles.css', array(), '1.1', 'all');
-	 wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array ( 'jquery' ), 1.1, true);
+	 wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array ( 'jquery' ), 1.1, true);
+	 wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
  }
  add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 

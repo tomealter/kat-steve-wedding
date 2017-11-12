@@ -1,0 +1,29 @@
+//STORY SECTION
+.section.section--story {
+  
+  .section__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1em;
+    margin-right: -1em;
+
+    .flex-column {
+      flex-basis: 100%;
+      padding: 0 1em;
+
+      @include breakpoint(800px) {
+        flex-basis: 40%;
+
+        &:last-child {
+          flex-basis: 60%;
+        }
+      }
+    }
+  }
+  
+  .section__content {
+    @include breakpoint(800px) {
+      padding-left: 1.5em;
+    }
+  }
+}
