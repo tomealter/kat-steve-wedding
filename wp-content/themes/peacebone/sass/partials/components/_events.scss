@@ -1,9 +1,15 @@
+$event-bp: 700px;
+
 .events {
-  padding: 1em;
   display: block;
-  position: relative;
-  max-width: 800px;
   margin: 0 auto;
+  max-width: 900px;
+  padding: 1em;
+  position: relative;
+
+  @include breakpoint($event-bp) {
+    padding: 3em 1em 2em;
+  }
 }
 
 .events__row {
@@ -14,54 +20,118 @@
 }
 
 .events__date-list {
-  flex-basis: 100px;
   border-right: solid 1px #ddd;
+  flex-basis: 160px;
   padding-top: 0.5em;
+  display: none;
+
+  @include breakpoint($event-bp) {
+    display: block;
+  }
 }
 
 .events__date {
-  font-size: 1.2em;
-  margin-bottom: 0.5em;
   cursor: pointer;
-  text-align: right;
+  font-size: 1.8em;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5em;
   padding-right: 1em;
   position: relative;
-  font-weight: 700;
+  text-align: right;
+
+  @include pseudoblock(after, block) {
+    background-color: #fff;
+    display: block;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 200ms ease-in;
+    width: 6px;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
   
   &.is-active {
     &:after {
-      display: block;
-      height: 100%;
-      position: absolute;
-      width: 4px;
-      background-color: #000;
-      content: '';
-      right: 0;
-      top: 0;
+      opacity: 1;
     }
+
     &:before {
       content: 'JULY';
-      font-weight: 300;
-      position: relative;
+      font-weight: 700;
       left: -10px;
+      position: relative;
     }
   }
 }
 
 .events__list {
-  flex-basis: calc(100% - 100px);
   box-sizing: border-box;
-  padding-left: 1.5em;
+
+  @include breakpoint($event-bp) {
+    flex-basis: calc(100% - 160px);
+    padding-left: 1.5em;
+  }
 }
 
 .events__item {
+  opacity: 1;
+  margin-bottom: 4em;
+  position: relative;
+  transition: opacity 400ms ease-in;
+
+  @include breakpoint($event-bp) {
+    position: absolute;
+    opacity: 0;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+}
+
+.events__title {
+  margin-bottom: 0.2em;
+  transition: none;
+  line-height: 1.2;
+}
+
+.events__summary {
+  transition: none;
+
+  @include breakpoint($event-bp) {
+    font-size: 22px;
+  }
+}
+
+.events__bg-number {
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: .2;
   position: absolute;
-  //display: none;
-  opacity: 0;
-  transition: all .3s ease-in;
-  
-  &.is-active {
-    //display: block;
-    opacity: 1;
+  right: 0;
+  top: 10px;
+  transition: none;
+
+  @include breakpoint($event-bp) {
+    top: 0;
+  }
+}
+
+.events__small-date {
+  border-bottom: 1px solid #fff;
+  font-size: 14px;
+  margin-bottom: 0.75em;
+
+  @include breakpoint($event-bp) {
+    display: none;
   }
 }

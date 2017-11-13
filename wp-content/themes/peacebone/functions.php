@@ -66,6 +66,8 @@ function add_theme_scripts() {
 	 wp_enqueue_style( 'styles', get_template_directory_uri() . '/css/styles.css', array(), '1.1', 'all');
 	 wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array ( 'jquery' ), 1.1, true);
 	 wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
+	 wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js', array(), null, true);
+	 
  }
  add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 

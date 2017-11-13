@@ -11,8 +11,16 @@
     $(this).addClass('is-active');
     
     content.removeClass('is-active');
-    $( '.events__item#' + date).addClass('is-active');
+    var selectedEvent = $( '.events__item#' + date)
+    selectedEvent.addClass('is-active');
+    
+    TweenMax.staggerFrom(selectedEvent.children(), .3, {
+      x: '+=100',
+      ease:Power1.easeIn
+    },  0.15);
   });
+
+
 
 
 
