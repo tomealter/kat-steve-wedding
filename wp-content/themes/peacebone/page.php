@@ -21,7 +21,21 @@
  * @since    Timber 0.1
  */
 
+# Timber Context
 $context = Timber::get_context();
+
 $post = new TimberPost();
 $context['post'] = $post;
-Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
+
+# Add to context, for events
+$context['events'] = Timber::get_posts(
+  array(
+    'post_type'   => 'events',
+    'meta_key'   => 'event_date',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC'
+  )
+);
+
+# Render view
+Timber::render( 'page-homepage.twig', $context );

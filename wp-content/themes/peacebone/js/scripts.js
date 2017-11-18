@@ -27,8 +27,8 @@
   $('.image-grid__item').each( function() {
     var currentPhoto = this;
     
-    var tween = TweenMax.from(currentPhoto, .5, {
-      x: '-=1000', 
+    var tween = TweenMax.from(currentPhoto, .3, {
+      x: '-=100', 
       'opacity': '0',
       ease:Power1.easeIn
     });
