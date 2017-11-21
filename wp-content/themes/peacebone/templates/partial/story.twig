@@ -1,0 +1,27 @@
+<div class="section section--white section--story">
+  <div class="l-constrain">
+    {% if post.story_title %}
+      <h1 class="section__title">{{ post.story_title }}</h1>
+    {% endif %}
+
+    <div class="section__row">
+      <div class="flex-column">
+        <div class="image-grid">
+          <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_1).src }})"></div>
+          <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_2).src }})"></div>
+          <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_3).src }})"></div>
+          <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_4).src }})"></div>
+          <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_5).src }})"></div>
+        </div>
+      </div>
+      <div class="flex-column">
+        <div class="section__content">
+          {% if post.story_content %}
+            {{ post.story_content }}
+          {% endif %}
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>
+

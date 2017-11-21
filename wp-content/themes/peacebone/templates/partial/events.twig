@@ -1,0 +1,46 @@
+<div class="section section--gradient section--events">
+  <div class="l-constrain">
+    {% if post.events_title %}
+      <h1 class="section__title">{{ post.events_title }}</h1>
+    {% endif %}
+
+
+    <div class="events">
+      <div class="events__row"> 
+        <div class="events__date-list">
+        
+          {% for post in events %}
+            {% if loop.first %}
+              <div id="date-{{ post.event_date }}" class="events__date is-active">{{ post.event_date }}</div>
+            {% else %}
+              <div id="date-{{ post.event_date }}" class="events__date">{{ post.event_date }}</div>
+            {% endif %}
+          {% endfor %}
+
+        </div>
+        <div class="events__list">
+
+          {% for post in events %}
+            {% if loop.first %}
+              <div id="date-{{ post.event_date }}" class="events__item is-active">
+                <div class="events__small-date">JULY {{ post.event_date }}</div>
+                <h3 class="events__title">{{ post.title }}</h3>
+                <p class="events__summary">{{ post.event_summary }}</p>
+                <div class="events__bg-number">{{ post.event_date }}</div>
+              </div>
+            {% else %}
+              <div id="date-{{ post.event_date }}" class="events__item">
+                <div class="events__small-date">JULY {{ post.event_date }}</div>
+                <h3 class="events__title">{{ post.title }}</h3>
+                <p class="events__summary">{{ post.event_summary }}</p>
+                <div class="events__bg-number">{{ post.event_date }}</div>
+              </div>
+            {% endif %}
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

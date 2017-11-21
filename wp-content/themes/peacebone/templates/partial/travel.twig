@@ -1,0 +1,26 @@
+<div class="section section--white section--travel">
+  <div class="l-constrain">
+    {% if post.travel_title %}
+      <h1 class="section__title">{{ post.travel_title }}</h1>
+    {% endif %}
+
+    <div class="section__content">
+
+      {% if post.travel_address %}
+        <h4 class="section__address">{{ post.travel_address }}</h4>
+      {% endif %}
+
+      {% if post.travel_summary %}
+        <p class="section__summary">{{ post.travel_summary }}</p>
+      {% endif %}
+
+      <a href="#" class="button button--black">Things to do</a>
+    </div>
+
+    <div class="section__map">
+      <div class="section__map-marker"></div>
+    </div>
+    
+  </div>
+</div>
+

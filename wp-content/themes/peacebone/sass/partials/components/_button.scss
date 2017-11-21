@@ -3,24 +3,39 @@
   color: #fff;
   display: inline-block;
   font-weight: 700;
+  overflow: hidden;
   padding: .7em 3em;
   position: relative;
-  overflow: hidden;
+  text-transform: uppercase;
+  z-index: 1;
 
   @include pseudoblock(after, block) {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: -100%;
-    top: 0;
     background-color: #fff;
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: 0;
     transition: left 200ms ease-in;
+    width: 100%;
     z-index: -1; 
   }
 
   &:hover {
     &:after {
       left: 0;
+    }
+  }
+
+  &.button--black {
+    border: solid 2px $black;
+    color: $black;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:after {
+      background-color: $black;
     }
   }
 }

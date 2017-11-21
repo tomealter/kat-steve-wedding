@@ -8,99 +8,15 @@
   <div class="bg-image image-3" style="background-image: url(http://picsum.photos/1600/1002)"></div>
 
   {# LANDING SECTION #}
-	<div class="section section--gradient section--landing">
-    <div class="section__content">
-      {% if post.landing_title %}
-        <h1 class="section__title">{{ post.landing_title }}</h1>
-      {% endif %}
-
-      {% if post.landing_subtitle %}
-        <h2 class="section__subtitle">{{ post.landing_subtitle }}</h2>
-      {% endif %}
-
-      {% if post.landing_date %}
-        <h4 class="section__date">{{ post.landing_date }}</h4>
-      {% endif %}
-    
-      <a href="#" class="button section__button">RSVP</a>
-    </div>
-  </div>
+	{% include "partial/landing.twig" %}
 
   {# STORY SECTION #}
-	<div class="section section--white section--story">
-    <div class="l-constrain">
-      {% if post.story_title %}
-        <h1 class="section__title">{{ post.story_title }}</h1>
-      {% endif %}
-
-      <div class="section__row">
-        <div class="flex-column">
-          <div class="image-grid">
-            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_1).src }})"></div>
-            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_2).src }})"></div>
-            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_3).src }})"></div>
-            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_4).src }})"></div>
-            <div class="image-grid__item" style="background-image: url({{ TimberImage(post.story_image_5).src }})"></div>
-          </div>
-        </div>
-        <div class="flex-column">
-          <div class="section__content">
-            {% if post.story_content %}
-              {{ post.story_content }}
-            {% endif %}
-          </div>
-        </div>
-      </div>  
-    </div>
-  </div>
+  {% include "partial/story.twig" %}
 
   {# EVENTS SECTION #}
+  {% include "partial/events.twig" %}
 
-  <div class="section section--gradient section--events">
-    <div class="l-constrain">
-
-      {% if post.events_title %}
-        <h1 class="section__title">{{ post.events_title }}</h1>
-      {% endif %}
-
-
-      <div class="events">
-        <div class="events__row"> 
-          <div class="events__date-list">
-          
-            {% for post in events %}
-              {% if loop.first %}
-                <div id="date-{{ post.event_date }}" class="events__date is-active">{{ post.event_date }}</div>
-              {% else %}
-                <div id="date-{{ post.event_date }}" class="events__date">{{ post.event_date }}</div>
-              {% endif %}
-            {% endfor %}
-
-          </div>
-          <div class="events__list">
-
-            {% for post in events %}
-              {% if loop.first %}
-                <div id="date-{{ post.event_date }}" class="events__item is-active">
-                  <div class="events__small-date">JULY {{ post.event_date }}</div>
-                  <h3 class="events__title">{{ post.title }}</h3>
-                  <p class="events__summary">{{ post.event_summary }}</p>
-                  <div class="events__bg-number">{{ post.event_date }}</div>
-                </div>
-              {% else %}
-                <div id="date-{{ post.event_date }}" class="events__item">
-                  <div class="events__small-date">JULY {{ post.event_date }}</div>
-                  <h3 class="events__title">{{ post.title }}</h3>
-                  <p class="events__summary">{{ post.event_summary }}</p>
-                  <div class="events__bg-number">{{ post.event_date }}</div>
-                </div>
-              {% endif %}
-            {% endfor %}
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {# TRAVEL SECTION #}
+  {% include "partial/travel.twig" %}
 
 {% endblock %}
