@@ -4,8 +4,10 @@
       <h1 class="section__title">{{ post.travel_title }}</h1>
     {% endif %}
 
-    <div class="section__content">
+    <div class="section__map"></div>
+    <div class="section__map-marker"></div>
 
+    <div class="section__content">
       {% if post.travel_address %}
         <h4 class="section__address">{{ post.travel_address }}</h4>
       {% endif %}
@@ -17,10 +19,6 @@
       <a href="#" class="button button--black">Things to do</a>
     </div>
 
-    <div class="section__map">
-      <div class="section__map-marker"></div>
-    </div>
-    
   </div>
 </div>
 

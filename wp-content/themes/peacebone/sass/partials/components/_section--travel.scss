@@ -3,6 +3,7 @@ $travel-bp: 900px;
 .section.section--travel {
   position: relative;
   padding-bottom: 150px;
+  z-index: 1;
 
   .section__content {
 
@@ -18,30 +19,41 @@ $travel-bp: 900px;
 }
 
 .section__map {
-  width: 60%;
   @include svg-background(cornwall);
-  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: contain;
   display: block;
+  height: 500px;
+  margin: 0 auto;
   position: absolute;
-  bottom: 30px;
-  right: 0;
+  top: 50px;
+  width: calc(100% - 2em);
+  z-index: -1;
 
   @include breakpoint($travel-bp) {
-    width: 60%;
+    bottom: 30px;
     height: calc(100% - 120px);
+    margin: 0;
+    right: 1.5em;
+    width: 60%;
+    top: auto;
   }
 }
 
 .section__map-marker {
-  @include svg-background(map-arrow);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 40px;
-  height: 80px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  
+  @include breakpoint($travel-bp) {
+    @include svg-background(map-arrow);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 30px;
+    height: calc(100% - 120px);
+    margin: 0;
+    position: absolute;
+    right: 1.5em;
+    top: auto;
+    width: 60%;
+  }
 }
