@@ -38,4 +38,7 @@ $context['events'] = Timber::get_posts(
 );
 
 # Render view
-Timber::render( 'page-homepage.twig', $context );
+Timber::render( array(
+  'page-' . $post->post_name . '.twig',
+  'page.twig'
+), $context );

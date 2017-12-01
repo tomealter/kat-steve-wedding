@@ -28,7 +28,7 @@
     var currentPhoto = this;
     
     var tween_story = TweenMax.from(currentPhoto, .3, {
-      x: '-=100', 
+      x: '-=200', 
       'opacity': '0',
       ease:Power1.easeIn
     });

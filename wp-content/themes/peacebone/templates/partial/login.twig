@@ -1,0 +1,22 @@
+<div class="section section--white section--login">
+  <div class="section__content">
+    {% if post.landing_title %}
+      <h1 class="section__title">{{ post.landing_title }}</h1>
+    {% endif %}
+
+    {% if post.landing_subtitle %}
+      <h2 class="section__subtitle">{{ post.landing_subtitle }}</h2>
+    {% endif %}
+
+    {% if post.landing_date %}
+      <h4 class="section__date">{{ post.landing_date }}</h4>
+    {% endif %}
+
+    <form action="" class="login-form">
+      <input class="login__code" type="text" placeholder="Passcode">
+      <input class="login__submit button button--black" type="submit" value="LOGIN">
+    </form>
+  
+    
+  </div>
+</div>

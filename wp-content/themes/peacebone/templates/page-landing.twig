@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block header %}
+
+{% endblock %}
+
+
+{% block content %}
+
+  {# LANDING SECTION #}
+	{% include "partial/login.twig" %}
+
+
+{% endblock %}
+
+{# FOOTER #}
+{% block footer %}
+  <footer id="footer">
+    {% include 'footer.twig' %}
+  </footer>
+  {{ function('wp_footer') }}
+{% endblock %}

@@ -1,0 +1,38 @@
+.login {
+
+}
+
+.login__code {
+  border: solid 2px #333;
+  display: block;
+  font-family: $base-font;
+  font-size: $base-font-size;
+  margin: 0 auto 1.5em;
+  outline: none;
+  padding: .7em 1em;
+  text-align: center;
+  width: 280px;
+}
+
+.login__submit {
+  background-color: transparent;
+  border: solid 2px $black;
+  color: $black;
+  cursor: pointer;
+  display: block;
+  font-family: $base-font;
+  font-size: $base-font-size;
+  font-weight: 700;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: .7em 3em;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+  
+  &:hover {
+    color: #fff;
+    background-color: $black;
+  }
+}

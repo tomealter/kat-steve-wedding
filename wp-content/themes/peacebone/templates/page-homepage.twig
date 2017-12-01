@@ -19,4 +19,15 @@
   {# TRAVEL SECTION #}
   {% include "partial/travel.twig" %}
 
+  {# RSVP SECTION #}
+  {% include "partial/rsvp.twig" %}
+
+{% endblock %}
+
+{# FOOTER #}
+{% block footer %}
+  <footer id="footer">
+    {% include 'footer.twig' %}
+  </footer>
+  {{ function('wp_footer') }}
 {% endblock %}
