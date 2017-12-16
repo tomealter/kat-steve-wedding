@@ -1,0 +1,41 @@
+.nf-form-wrap {
+  
+  input, 
+  select,
+  textarea {
+    font-family: $base-font;
+    font-size: 16px;
+    padding: .8em .5em;
+    border-color: #fff;
+    border-style: none;
+  }
+
+  input[type=button] {
+    border: solid 2px #fff;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    overflow: hidden;
+    padding: .7em 3em;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+
+    &:hover {
+      color: $purple;
+      background-color: #fff;
+    }
+  }
+
+  .nf-error-msg,
+  .ninja-forms-req-symbol {
+    color: $teal;
+  }
+
+  .nf-error .ninja-forms-field {
+    border-color: $teal;
+  }
+}
+
