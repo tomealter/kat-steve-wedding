@@ -1,0 +1,24 @@
+.back-to-top {
+  position: fixed;
+  opacity: 1;
+  bottom: 1.5em;
+  right: 1.5em;
+  height: 40px;
+  width: 40px;
+  display: block;
+  background-color: #ccc;
+  border-radius: 5px;
+  z-index: 10;
+  @include svg-background(back-to-top);
+  background-size: 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-color: $teal;
+  }
+
+  &.is-active {
+    opacity: 1;
+  }
+}
