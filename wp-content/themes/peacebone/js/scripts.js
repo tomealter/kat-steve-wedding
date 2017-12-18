@@ -1,20 +1,20 @@
 (function($) {
   
   //EVENTS
-  var trigger = $('.events__date');
-  var content = $('.events__item');
+  var trigger = $('.ceremony__menu-item');
+  var content = $('.ceremony__item');
   
   trigger.on('click', function() {
-    var date = $(this).attr('id');
+    var activeTab = $(this).attr('id');
     
     trigger.removeClass('is-active');
     $(this).addClass('is-active');
     
     content.removeClass('is-active');
-    var selectedEvent = $( '.events__item#' + date)
-    selectedEvent.addClass('is-active');
+    var selectedTab = $( '.ceremony__item#' + activeTab)
+    selectedTab.addClass('is-active');
     
-    TweenMax.staggerFrom(selectedEvent.children(), .3, {
+    TweenMax.staggerFrom(selectedTab.children(), .3, {
       x: '+=100',
       "opacity": "0",
       ease:Power1.easeIn
@@ -47,7 +47,7 @@
   tween_travel.from(map, 0.5, {'opacity':0, y: -50})
   .from(mapMarker, 0.5, {'opacity':0,  y: -200, ease:Back.easeOut}, '1');
 
-  var scene_travel = new ScrollMagic.Scene({triggerElement: '.section__map', triggerHook: 0.6})
+  var scene_travel = new ScrollMagic.Scene({triggerElement: '.section__map', triggerHook: 0.5})
   .setTween(tween_travel)
   .addTo(controller); 
 
@@ -91,11 +91,30 @@
   });
 
 
+  //Show back to top button when user scrolls away from the top
+  $(window).scroll(function() {
+    scrollPosition = $(this).scrollTop();
+    if (scrollPosition >= 200) {
+      $('.back-to-top').addClass('is-active');
+    }
+    else {
+      $('.back-to-top').removeClass('is-active');
+    }
+  });
 
 
+  //Change Background Image on scroll
+  new ScrollMagic.Scene({
+    triggerElement: "#ceremony", 
+    triggerHook: 'onEnter'
+  }).setClassToggle(".bg-image-2", "is-active")
+  .addTo(controller);
 
-
-
+  new ScrollMagic.Scene({
+    triggerElement: "#rsvp", 
+    triggerHook: 'onEnter'
+  }).setClassToggle(".bg-image-3", "is-active")
+  .addTo(controller);
 
 
 

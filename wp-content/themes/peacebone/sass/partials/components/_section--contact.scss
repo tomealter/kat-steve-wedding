@@ -1,4 +1,7 @@
 .section--contact {
+  &.section {
+    min-height: 0;
+  }
 
   .section__content {
     text-align: center;

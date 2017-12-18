@@ -17,7 +17,7 @@
       <div class="flex-column">
         <div class="section__content">
           {% if post.story_content %}
-            {{ post.story_content }}
+            {{ post.story_content|raw }}
           {% endif %}
         </div>
       </div>

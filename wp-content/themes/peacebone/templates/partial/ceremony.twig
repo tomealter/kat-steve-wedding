@@ -1,0 +1,61 @@
+<div id="ceremony" class="section section--gradient section--ceremony">
+  <div class="l-constrain">
+    {% if post.ceremony_title %}
+      <h1 class="section__title">{{ post.ceremony_title }}</h1>
+    {% endif %}
+
+
+    <div class="ceremony">
+      <div class="ceremony__row"> 
+        <div class="ceremony__menu-list">
+
+          <div id="when" class="ceremony__menu-item is-active">When</div>
+          <div id="where" class="ceremony__menu-item">Where</div>
+          <div id="what" class="ceremony__menu-item">What</div>
+          <div id="attire" class="ceremony__menu-item">Attire</div>
+          <div id="more" class="ceremony__menu-item">More</div>
+
+        </div>
+        <div class="events__list">
+
+          <div id="when" class="ceremony__item is-active">
+            <div class="ceremony__title-small">when</div>
+            <h3 class="ceremony__title">{{ post.ceremony_when_title }}</h3>
+            <p class="ceremony__summary">{{ post.ceremony_when_content }}</p>
+            {# <div class="ceremony__bg-text">{{ post.event_date }}</div> #}
+          </div>
+
+          <div id="where" class="ceremony__item">
+            <div class="ceremony__title-small">where</div>
+            <h3 class="ceremony__title">{{ post.ceremony_where_title }}</h3>
+            <p class="ceremony__summary">{{ post.ceremony_where_content }}</p>
+            {# <div class="ceremony__bg-text">{{ post.event_date }}</div> #}
+          </div>
+
+          <div id="what" class="ceremony__item">
+            <div class="ceremony__title-small">what</div>
+            <h3 class="ceremony__title">{{ post.ceremony_what_title }}</h3>
+            <p class="ceremony__summary">{{ post.ceremony_what_content }}</p>
+            {# <div class="ceremony__bg-text">{{ post.event_date }}</div> #}
+          </div>
+
+          <div id="attire" class="ceremony__item">
+            <div class="ceremony__title-small">attire</div>
+            <h3 class="ceremony__title">{{ post.ceremony_attire_title }}</h3>
+            <p class="ceremony__summary">{{ post.ceremony_attire_content }}</p>
+            {# <div class="ceremony__bg-text">{{ post.event_date }}</div> #}
+          </div>
+
+          <div id="more" class="ceremony__item">
+            <div class="ceremony__title-small">more</div>
+            <h3 class="ceremony__title">{{ post.ceremony_more_title }}</h3>
+            <p class="ceremony__summary">{{ post.ceremony_more_content }}</p>
+            {# <div class="ceremony__bg-text">{{ post.event_date }}</div> #}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,36 +1,37 @@
-$event-bp: 800px;
+$ceremony-bp: 800px;
 
-.events {
+.ceremony {
   display: block;
   margin: 0 auto;
   max-width: 900px;
   padding: 1em;
   position: relative;
 
-  @include breakpoint($event-bp) {
+  @include breakpoint($ceremony-bp) {
     padding: 3em 1em 2em;
   }
 }
 
-.events__row {
+.ceremony__row {
   display: flex;
   flex-wrap: wrap;
   margin-left: -1em;
   margin-right: -1em;
 }
 
-.events__date-list {
+.ceremony__menu-list {
   border-right: solid 1px #ddd;
   flex-basis: 160px;
   padding-top: 0.5em;
   display: none;
 
-  @include breakpoint($event-bp) {
+  @include breakpoint($ceremony-bp) {
     display: block;
+    padding-bottom: 60px;
   }
 }
 
-.events__date {
+.ceremony__menu-item {
   cursor: pointer;
   font-size: 1.8em;
   font-weight: 200;
@@ -64,32 +65,26 @@ $event-bp: 800px;
     &:after {
       opacity: 1;
     }
-
-    &:before {
-      content: 'JULY';
-      font-weight: 700;
-      left: -10px;
-      position: relative;
-    }
   }
 }
 
-.events__list {
+.ceremony__list {
   box-sizing: border-box;
 
-  @include breakpoint($event-bp) {
+  @include breakpoint($ceremony-bp) {
     flex-basis: calc(100% - 160px);
     padding-left: 1.5em;
   }
 }
 
-.events__item {
+.ceremony__item {
   margin-bottom: 4em;
   opacity: 1;
   position: relative;
   transition: none;
 
-  @include breakpoint($event-bp) {
+  @include breakpoint($ceremony-bp) {
+    padding-left: 1.5em;
     position: absolute;
     opacity: 0;
 
@@ -99,21 +94,21 @@ $event-bp: 800px;
   }
 }
 
-.events__title {
+.ceremony__title {
   line-height: 1.2;
   margin-bottom: 0.2em;
   transition: none;
 }
 
-.events__summary {
+.ceremony__summary {
   transition: none;
 
-  @include breakpoint($event-bp) {
+  @include breakpoint($ceremony-bp) {
     font-size: 22px;
   }
 }
 
-.events__bg-number {
+.ceremony__bg-text {
   font-size: 200px;
   font-weight: 700;
   line-height: 1;
@@ -123,18 +118,18 @@ $event-bp: 800px;
   top: 10px;
   transition: none;
 
-  @include breakpoint($event-bp) {
+  @include breakpoint($ceremony-bp) {
     top: 0;
   }
 }
 
-.events__small-date {
+.ceremony__title-small {
   border-bottom: 1px solid #fff;
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 0.75em;
 
-  @include breakpoint($event-bp) {
+  @include breakpoint($ceremony-bp) {
     display: none;
   }
 }

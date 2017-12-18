@@ -3,9 +3,9 @@
 {% block content %}
 
   {# BG IMAGE FIXED BLOCK #}
-  <div class="bg-image image-1" style="background-image: url(http://picsum.photos/1600/1000)"></div>
-  <div class="bg-image image-2" style="background-image: url(http://picsum.photos/1600/1001)"></div>
-  <div class="bg-image image-3" style="background-image: url(http://picsum.photos/1600/1002)"></div>
+  <div class="bg-image bg-image-1 is-active" style="background-image: url({{ Image(post.bg_image_1).src }})"></div>
+  <div class="bg-image bg-image-2" style="background-image: url({{ Image(post.bg_image_2).src }})"></div>
+  <div class="bg-image bg-image-3" style="background-image: url({{ Image(post.bg_image_3).src }})"></div>
 
   {# LANDING SECTION #}
 	{% include "partial/landing.twig" %}
@@ -14,7 +14,7 @@
   {% include "partial/story.twig" %}
 
   {# EVENTS SECTION #}
-  {% include "partial/events.twig" %}
+  {% include "partial/ceremony.twig" %}
 
   {# TRAVEL SECTION #}
   {% include "partial/travel.twig" %}
