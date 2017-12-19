@@ -50,12 +50,12 @@ h2 {
 
 h3 {
   font-family: $base-font;
-  font-size: em(36px);
+  font-size: em(32px);
   font-weight: 700;
   margin: 0 0 .5em 0;
 
   @include breakpoint(700px) {
-    font-size: em(48px);
+    font-size: em(45px);
   }
 }
 

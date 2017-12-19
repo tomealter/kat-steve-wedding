@@ -42,7 +42,7 @@ class StarterSite extends TimberSite {
 		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
-		$context['events'] = Timber::get_posts('post_type=events');
+		$context['things_to_do'] = Timber::get_posts('post_type=things_to_do');
 		return $context;
 	}
 

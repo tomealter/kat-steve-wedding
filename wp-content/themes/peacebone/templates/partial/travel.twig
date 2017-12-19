@@ -7,16 +7,40 @@
     <div class="section__map"></div>
     <div class="section__map-marker"></div>
 
-    <div class="section__content">
-      {% if post.travel_address %}
-        <h4 class="section__address">{{ post.travel_address }}</h4>
+    <div class="section__split-content">
+      {% if post.travel_split %}
+        {{ post.travel_split }}
       {% endif %}
+    </div>
 
-      {% if post.travel_summary %}
-        <p class="section__summary">{{ post.travel_summary }}</p>
+    <div class="section__hotels">
+      {% if post.travel_hotels %}
+        {{ post.travel_hotels }}
       {% endif %}
+    </div>
 
-      {# <a href="#" class="button button--black">Things to do</a> #}
+    <div class="hotel-grid">
+      <div class="hotel-grid__item">
+        <h3 class="hotel-grid__title">{{ post.hotel_1_title }}</h3>
+        <div class="hotel-grid__summary">{{ post.hotel_1_summary }}</div>
+        <a href="{{ post.hotel_1_link }}" class="hotel-grid__link button button--black">Read More</a>
+      </div>
+      <div class="hotel-grid__item">
+        <h3 class="hotel-grid__title">{{ post.hotel_2_title }}</h3>
+        <div class="hotel-grid__summary">{{ post.hotel_2_summary }}</div>
+        <a href="{{ post.hotel_2_link }}" class="hotel-grid__link button button--black">Read More</a>
+      </div>
+      <div class="hotel-grid__item">
+        <h3 class="hotel-grid__title">{{ post.hotel_3_title }}</h3>
+        <div class="hotel-grid__summary">{{ post.hotel_3_summary }}</div>
+        <a href="{{ post.hotel_3_link }}" class="hotel-grid__link button button--black"> Read More</a>
+      </div>
+    </div>
+
+    <div class="section__more">
+      {% if post.travel_more %}
+        {{ post.travel_more }}
+      {% endif %}
     </div>
 
   </div>

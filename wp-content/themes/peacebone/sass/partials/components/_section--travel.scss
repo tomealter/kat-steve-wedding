@@ -5,10 +5,10 @@ $travel-bp: 900px;
   padding-bottom: 150px;
   z-index: 1;
 
-  .section__content {
-
+  .section__split-content {
     @include breakpoint($travel-bp) {
-      width: 50%;
+      width: 60%;
+      margin-bottom: 3em;
     }
   }
 
@@ -20,7 +20,7 @@ $travel-bp: 900px;
 
 .section__map {
   @include svg-background(cornwall);
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
@@ -32,12 +32,12 @@ $travel-bp: 900px;
   z-index: -1;
 
   @include breakpoint($travel-bp) {
-    bottom: 30px;
     height: calc(100% - 120px);
     margin: 0;
+    max-height: 750px;
     right: 1.5em;
+    top: 100px;
     width: 60%;
-    top: auto;
   }
 }
 
@@ -45,15 +45,15 @@ $travel-bp: 900px;
   
   @include breakpoint($travel-bp) {
     @include svg-background(map-arrow);
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: contain;
-    bottom: 30px;
     height: calc(100% - 120px);
     margin: 0;
+    max-height: 750px;
     position: absolute;
     right: 1.5em;
-    top: auto;
+    top: 100px;
     width: 60%;
   }
 }

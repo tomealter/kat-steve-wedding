@@ -1,0 +1,21 @@
+<div id="contact" class="section section--gradient section--things-to-do">
+  <div class="l-constrain">
+    {% if post.things_to_do_title %}
+      <h1 class="section__title">{{ post.things_to_do_title }}</h1>
+    {% endif %}
+
+    <div class="section__content">
+      <div class="ttd">
+        {% for post in things_to_do %}
+          <div class="ttd__item">
+            <h3 class="ttd__title">{{ post.title }}</h3>
+            <div class="ttd__content">{{ post.content }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
