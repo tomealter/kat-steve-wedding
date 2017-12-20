@@ -11,7 +11,7 @@
       flex-basis: 100%;
       padding: 0 1em;
 
-      @include breakpoint(800px) {
+      @include breakpoint(1000px) {
         flex-basis: 40%;
 
         &:last-child {
@@ -22,7 +22,7 @@
   }
   
   .section__content {
-    @include breakpoint(800px) {
+    @include breakpoint(1000px) {
       padding-left: 1.5em;
     }
   }

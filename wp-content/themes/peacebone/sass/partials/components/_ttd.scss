@@ -1,0 +1,46 @@
+$ttd-bp: 900px;
+
+.ttd {
+  a {
+    font-weight: 700;
+    color: #ffffff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+.ttd__item {
+  margin-bottom: 2em;
+  
+  @include breakpoint($ttd-bp) {
+    position: relative;
+  }
+}
+
+.ttd__title {
+  @include breakpoint($ttd-bp) {
+    font-size: 3em;
+    margin-bottom: .1em;
+  }
+
+  @include pseudoblock(after, block) {
+    width: 100px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+
+    @include breakpoint($ttd-bp) {
+      top: -10px;
+    }
+  }
+}

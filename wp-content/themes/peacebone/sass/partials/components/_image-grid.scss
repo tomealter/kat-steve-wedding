@@ -1,3 +1,5 @@
+$image-grid-bp: 1000px;
+
 .image-grid {
   position: relative;
   margin-bottom: 2em;
@@ -20,7 +22,7 @@
   width: 90%;
   max-width: 100%;
 
-  @include breakpoint(800px) {
+  @include breakpoint($image-grid-bp) {
     left: auto;
     position: absolute;
     right: 0;
@@ -45,7 +47,7 @@
       height: 300px;
     }
 
-    @include breakpoint(800px) {
+    @include breakpoint($image-grid-bp) {
       top: 95px;
       right: auto;
       left: 20px;
@@ -58,7 +60,7 @@
   &:nth-child(3n) {
     display: none;
 
-    @include breakpoint(800px) {
+    @include breakpoint($image-grid-bp) {
       top: 275px;
       left: 0;
       right: auto;
@@ -69,7 +71,7 @@
   &:nth-child(4n) {
     display: none;
 
-    @include breakpoint(800px) {
+    @include breakpoint($image-grid-bp) {
       top: 375px;
       right: 0;
       left: auto;
@@ -80,9 +82,30 @@
   &:nth-child(5n) {
     display: none;
 
-    @include breakpoint(800px) {
+    @include breakpoint($image-grid-bp) {
       top: 565px;
       right: 30px;
+      display: block;
+    }
+  }
+
+  &:nth-child(6n) {
+    display: none;
+
+    @include breakpoint($image-grid-bp) {
+      top: 680px;
+      right: auto;
+      display: block;
+      left: 20px;
+    }
+  }
+
+  &:nth-child(7n) {
+    display: none;
+
+    @include breakpoint($image-grid-bp) {
+      top: 860px;
+      right: auto;
       display: block;
     }
   }

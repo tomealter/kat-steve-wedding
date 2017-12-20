@@ -117,7 +117,33 @@
   .addTo(controller);
 
 
+  //Mobile Menu
+  var mobileTrigger = $('.mobile-menu-trigger');
+  var header = $('.header');
+  var navLink = $('.nav--main .nav__link');
+  var mobileMenuTween = new TimelineMax();
 
+  mobileTrigger.on('click', function() {
+    if (header.hasClass('is-active')) {
+      header.removeClass('is-active');
+      mobileTrigger.removeClass('is-active');
+      mobileMenuTween.to(navLink, 0.5, {opacity: 0, left: '100vw'})
+    }
+    else {
+      header.addClass('is-active');
+      mobileTrigger.addClass('is-active');
+      mobileMenuTween.to(navLink, 0.5, {opacity: 1, left: 0})
+    }
+  });
+
+  navLink.on('click', function() {
+    header.removeClass('is-active');
+    mobileTrigger.removeClass('is-active');
+
+    if ($(window).width() < 700) {
+      mobileMenuTween.to(navLink, 0.5, {opacity: 0, left: '100vw'})
+    }
+  });
 
 
 

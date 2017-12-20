@@ -1,0 +1,20 @@
+.mobile-menu-trigger {
+  @include svg-background(mobile-trigger);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  left: 1em;
+  position: absolute;
+  top: 1em;
+  width: 33px;
+  z-index: 99;
+
+  &.is-active {
+    @include svg-background(close);
+  }
+
+  @include breakpoint($mobile-bp) {
+    display: none;
+  }
+}

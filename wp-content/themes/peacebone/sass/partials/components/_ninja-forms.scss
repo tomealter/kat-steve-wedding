@@ -1,4 +1,5 @@
 .nf-form-wrap {
+  z-index: 1;
   
   input, 
   select,
@@ -6,15 +7,14 @@
     font-family: $base-font;
     font-size: 16px;
     padding: .8em .5em;
-    border-color: #fff;
-    border-style: none;
+    border: solid 1px $black;
   }
 
   input[type=button] {
-    border: solid 2px #fff;
+    border: solid 2px $black;
     background-color: transparent;
     cursor: pointer;
-    color: #fff;
+    color: $black;
     display: inline-block;
     font-weight: 700;
     overflow: hidden;
@@ -25,18 +25,22 @@
     transition: background-color 250ms ease-out;
 
     &:hover {
-      color: $purple;
-      background-color: #fff;
+      color: #fff;
+      background-color: $black;
     }
   }
 
   .nf-error-msg,
   .ninja-forms-req-symbol {
-    color: #fff;
+    color: $purple;
   }
 
   .nf-error .ninja-forms-field {
-    border-color: #fff;
+    border-color: $purple;
+  }
+
+  .nf-form-fields-required {
+    margin-bottom: 0.5em;
   }
 }
 
