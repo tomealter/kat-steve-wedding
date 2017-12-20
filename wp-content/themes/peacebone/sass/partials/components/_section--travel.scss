@@ -34,7 +34,7 @@ $travel-bp: 900px;
   @include breakpoint($travel-bp) {
     height: calc(100% - 120px);
     margin: 0;
-    max-height: 750px;
+    max-height: 700px;
     right: 1.5em;
     top: 100px;
     width: 60%;
@@ -50,7 +50,7 @@ $travel-bp: 900px;
     background-size: contain;
     height: calc(100% - 120px);
     margin: 0;
-    max-height: 750px;
+    max-height: 700px;
     position: absolute;
     right: 1.5em;
     top: 100px;

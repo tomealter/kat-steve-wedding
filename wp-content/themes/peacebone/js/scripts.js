@@ -111,9 +111,15 @@
   .addTo(controller);
 
   new ScrollMagic.Scene({
-    triggerElement: "#rsvp", 
+    triggerElement: "#things-to-do", 
     triggerHook: 'onEnter'
   }).setClassToggle(".bg-image-3", "is-active")
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#contact", 
+    triggerHook: 'onEnter'
+  }).setClassToggle(".bg-image-4", "is-active")
   .addTo(controller);
 
 
@@ -128,11 +134,13 @@
       header.removeClass('is-active');
       mobileTrigger.removeClass('is-active');
       mobileMenuTween.to(navLink, 0.5, {opacity: 0, left: '100vw'})
+      $('body').removeClass('no-scroll');
     }
     else {
       header.addClass('is-active');
       mobileTrigger.addClass('is-active');
       mobileMenuTween.to(navLink, 0.5, {opacity: 1, left: 0})
+      $('body').addClass('no-scroll');
     }
   });
 

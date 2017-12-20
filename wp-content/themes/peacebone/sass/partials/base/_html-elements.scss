@@ -13,6 +13,10 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
 }
 
 a {
@@ -76,5 +80,6 @@ h5 {
 
 .main {
   //transform: translateY(-80px);
+  position: relative;
 }
 
