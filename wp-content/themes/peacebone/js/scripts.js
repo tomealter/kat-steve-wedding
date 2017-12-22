@@ -147,6 +147,7 @@
   navLink.on('click', function() {
     header.removeClass('is-active');
     mobileTrigger.removeClass('is-active');
+    $('body').removeClass('no-scroll');
 
     if ($(window).width() < 700) {
       mobileMenuTween.to(navLink, 0.5, {opacity: 0, left: '100vw'})
